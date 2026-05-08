@@ -185,8 +185,63 @@
     </div>
 </section>
 
+{{-- ===== CLIENTS ===== --}}
+<section id="clients" class="section section-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Klien Kami</h2>
+            <span class="divider-accent"></span>
+            <p class="section-subtitle">Dipercaya oleh perusahaan-perusahaan terkemuka di berbagai industri.</p>
+        </div>
+
+        @php
+        $clients = [
+            ['name' => 'PT Indofood Sukses Makmur',    'initials' => 'IS',  'industry' => 'Food & Beverage',   'color' => '#e74c3c'],
+            ['name' => 'PT Unilever Indonesia',         'initials' => 'UI',  'industry' => 'Consumer Goods',    'color' => '#2980b9'],
+            ['name' => 'PT Astra International',        'initials' => 'AI',  'industry' => 'Otomotif',          'color' => '#1c2b4a'],
+            ['name' => 'PT Semen Indonesia',            'initials' => 'SI',  'industry' => 'Manufaktur',        'color' => '#27ae60'],
+            ['name' => 'PT Kalbe Farma',                'initials' => 'KF',  'industry' => 'Farmasi',           'color' => '#8e44ad'],
+            ['name' => 'PT Wings Group',                'initials' => 'WG',  'industry' => 'FMCG',             'color' => '#d35400'],
+            ['name' => 'PT Mayora Indah',               'initials' => 'MI',  'industry' => 'Food & Beverage',   'color' => '#c0392b'],
+            ['name' => 'PT Gudang Garam',               'initials' => 'GG',  'industry' => 'Manufaktur',        'color' => '#16a085'],
+        ];
+        @endphp
+
+        <div class="row g-4 justify-content-center">
+            @foreach($clients as $i => $client)
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="{{ ($i % 4) * 80 }}">
+                <div style="background:#fff;border-radius:12px;padding:1.8rem 1.2rem;text-align:center;
+                            height:100%;box-shadow:0 4px 20px rgba(0,0,0,.06);
+                            transition:transform .25s,box-shadow .25s;cursor:default;"
+                     onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,.12)'"
+                     onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,.06)'">
+                    <div style="width:64px;height:64px;background:{{ $client['color'] }};border-radius:14px;
+                                display:flex;align-items:center;justify-content:center;
+                                font-family:'Poppins',sans-serif;font-size:1.2rem;font-weight:800;
+                                color:#fff;margin:0 auto 1rem;letter-spacing:.03em;">
+                        {{ $client['initials'] }}
+                    </div>
+                    <h6 style="color:var(--primary);font-size:.88rem;font-weight:700;
+                               margin-bottom:.3rem;line-height:1.4;">{{ $client['name'] }}</h6>
+                    <span style="font-size:.78rem;color:var(--text-muted);">{{ $client['industry'] }}</span>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up">
+            <p style="color:var(--text-muted);font-size:.93rem;">
+                Dan masih banyak lagi perusahaan yang telah mempercayakan kebutuhan logistiknya kepada kami.
+            </p>
+            <a href="{{ route('web.contact') }}" class="btn-primary-custom mt-3">
+                <i class="fas fa-handshake me-2"></i>Bergabung Bersama Klien Kami
+            </a>
+        </div>
+    </div>
+</section>
+
 {{-- ===== LEGAL INFO ===== --}}
-<section class="section section-light">
+{{-- <section class="section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8" data-aos="fade-up">
@@ -217,6 +272,6 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 @endsection
