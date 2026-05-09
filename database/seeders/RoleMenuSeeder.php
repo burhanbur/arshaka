@@ -123,6 +123,41 @@ class RoleMenuSeeder extends Seeder
             ]);
         }
 
+        // ADM role - Manajemen Postingan
+        $adminRole = Role::where('code', 'ADM')->first();
+        $postsMenu = Menu::where('name', 'Manajemen Postingan')->first();
+        $postsIndexRoute = Route::where('name', 'blog.post.index')->first();
+
+        if ($adminRole && $postsMenu && $postsIndexRoute) {
+            RoleMenu::create([
+                'parent_id' => null,
+                'role_id' => $adminRole->id,
+                'menu_id' => $postsMenu->id,
+                'route_id' => $postsIndexRoute->id,
+                'sequence' => 1,
+                'is_active' => true,
+                'created_by' => null,
+                'updated_by' => null,
+            ]);
+        }
+
+        // ADM role - Manajemen Pesan
+        $messagesMenu = Menu::where('name', 'Manajemen Pesan')->first();
+        $messagesIndexRoute = Route::where('name', 'message.index')->first();
+
+        if ($adminRole && $messagesMenu && $messagesIndexRoute) {
+            RoleMenu::create([
+                'parent_id' => null,
+                'role_id' => $adminRole->id,
+                'menu_id' => $messagesMenu->id,
+                'route_id' => $messagesIndexRoute->id,
+                'sequence' => 2,
+                'is_active' => true,
+                'created_by' => null,
+                'updated_by' => null,
+            ]);
+        }
+
         // $this->command->info('RoleMenu seeder completed successfully!');
     }
 }

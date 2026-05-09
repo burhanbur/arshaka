@@ -52,6 +52,18 @@ class MenuSeeder extends Seeder
                 'created_by' => null,
                 'updated_by' => null,
             ],
+            [
+                'name' => 'Manajemen Postingan',
+                'icon' => 'flaticon2-writing',
+                'created_by' => null,
+                'updated_by' => null,
+            ],
+            [
+                'name' => 'Manajemen Pesan',
+                'icon' => 'flaticon2-chat-1',
+                'created_by' => null,
+                'updated_by' => null,
+            ],
         ];
 
         foreach ($menus as $menu) {

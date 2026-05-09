@@ -356,6 +356,19 @@ class RouteSeeder extends Seeder
             // Approval - Approval History
             ['name' => 'approval.approval-history.index', 'method' => 'GET', 'module' => 'Approval', 'description' => 'Daftar riwayat approval',  'created_by' => null, 'updated_by' => null],
             ['name' => 'approval.approval-history.show',  'method' => 'GET', 'module' => 'Approval', 'description' => 'Detail riwayat approval',  'created_by' => null, 'updated_by' => null],
+
+            // Blog - Posts
+            ['name' => 'blog.post.index',   'method' => 'GET',    'module' => 'Blog', 'description' => 'Menampilkan daftar postingan',              'created_by' => null, 'updated_by' => null],
+            ['name' => 'blog.post.create',  'method' => 'GET',    'module' => 'Blog', 'description' => 'Menampilkan form untuk membuat postingan',  'created_by' => null, 'updated_by' => null],
+            ['name' => 'blog.post.store',   'method' => 'POST',   'module' => 'Blog', 'description' => 'Menyimpan data postingan baru',             'created_by' => null, 'updated_by' => null],
+            ['name' => 'blog.post.edit',    'method' => 'GET',    'module' => 'Blog', 'description' => 'Menampilkan form untuk mengedit postingan', 'created_by' => null, 'updated_by' => null],
+            ['name' => 'blog.post.update',  'method' => 'PUT',    'module' => 'Blog', 'description' => 'Memperbarui data postingan',                'created_by' => null, 'updated_by' => null],
+            ['name' => 'blog.post.destroy', 'method' => 'DELETE', 'module' => 'Blog', 'description' => 'Menghapus data postingan',                  'created_by' => null, 'updated_by' => null],
+
+            // Messages
+            ['name' => 'message.index',   'method' => 'GET',    'module' => 'Messages', 'description' => 'Menampilkan daftar pesan masuk',  'created_by' => null, 'updated_by' => null],
+            ['name' => 'message.show',    'method' => 'GET',    'module' => 'Messages', 'description' => 'Menampilkan detail pesan',         'created_by' => null, 'updated_by' => null],
+            ['name' => 'message.destroy', 'method' => 'DELETE', 'module' => 'Messages', 'description' => 'Menghapus pesan',                  'created_by' => null, 'updated_by' => null],
         ];
 
         foreach ($routes as $route) {

@@ -98,5 +98,31 @@ class RolePermissionSeeder extends Seeder
                 ]);
             }
         }
+
+        // ADM role - Manajemen Postingan
+        $adminRole = Role::where('code', 'ADM')->first();
+
+        if ($adminRole) {
+            $postsRoutes = Route::where('module', 'Blog')->get();
+
+            foreach ($postsRoutes as $route) {
+                RolePermission::create([
+                    'role_id' => $adminRole->id,
+                    'route_id' => $route->id,
+                    'created_by' => null,
+                ]);
+            }
+
+            // ADM role - Manajemen Pesan
+            $messagesRoutes = Route::where('module', 'Messages')->get();
+
+            foreach ($messagesRoutes as $route) {
+                RolePermission::create([
+                    'role_id' => $adminRole->id,
+                    'route_id' => $route->id,
+                    'created_by' => null,
+                ]);
+            }
+        }
     }
 }
