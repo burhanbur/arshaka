@@ -70,8 +70,15 @@ Route::get('sitemap', function(){
         );
     }
 
+    // determine output path: in production site root is ../../public_html
+    if (isProduction()) {
+        $publicPath = base_path('../../public_html/sitemap.xml');
+    } else {
+        $publicPath = public_path('sitemap.xml');
+    }
+
     // simpan file (generator masih bisa dipakai untuk crawling otomatis jika diinginkan)
-    $sitemap->writeToFile(public_path('sitemap.xml'));
+    $sitemap->writeToFile($publicPath);
 
     return redirect()->route('web.home')
         ->with('notification', ['level' => 'success', 'message' => 'Sitemap berhasil digenerate.']);
