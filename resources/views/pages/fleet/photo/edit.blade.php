@@ -47,7 +47,7 @@
                     <div class="form-group">
                         <label>Foto Saat Ini</label>
                         <div class="mb-2">
-                            <img src="{{ Storage::url($data->image_path) }}" alt="{{ $data->caption }}"
+                            <img src="{{ asset(Storage::url($data->image_path)) }}" alt="{{ $data->caption }}"
                                  style="max-height:200px;border-radius:6px;object-fit:cover;">
                         </div>
                         <label>Ganti Foto (opsional)</label>

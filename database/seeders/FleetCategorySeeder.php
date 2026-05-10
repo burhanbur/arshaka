@@ -14,18 +14,18 @@ class FleetCategorySeeder extends Seeder
 
         $categories = [
             [
-                'name'        => 'Truck Engkel',
-                'slug'        => 'engkel',
-                'description' => 'Truck engkel adalah pilihan tepat untuk pengiriman dalam kota maupun antar kota dengan kebutuhan muatan menengah. Lincah di berbagai kondisi jalan dan efisien untuk distribusi barang ke berbagai titik.',
+                'name'        => 'CDE Longbox',
+                'slug'        => 'cde-longbox',
+                'description' => 'CDE Longbox adalah pilihan tepat untuk pengiriman dalam kota maupun antar kota dengan kebutuhan muatan menengah. Lincah di berbagai kondisi jalan dan efisien untuk distribusi barang ke berbagai titik.',
                 'order'       => 1,
                 'is_active'   => true,
                 'created_by'  => null,
                 'updated_by'  => null,
             ],
             [
-                'name'        => 'Truck Double',
-                'slug'        => 'double',
-                'description' => 'Truck double memberikan kapasitas angkut yang lebih besar, ideal untuk distribusi barang dalam volume menengah ke besar. Tersedia dalam konfigurasi bak terbuka maupun bak tertutup sesuai kebutuhan klien.',
+                'name'        => 'CDD Longbox',
+                'slug'        => 'cdd-longbox',
+                'description' => 'CDD Longbox memberikan kapasitas angkut yang lebih besar, ideal untuk distribusi barang dalam volume menengah ke besar. Tersedia dalam konfigurasi bak terbuka maupun bak tertutup sesuai kebutuhan klien.',
                 'order'       => 2,
                 'is_active'   => true,
                 'created_by'  => null,

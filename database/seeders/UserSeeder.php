@@ -16,6 +16,8 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->delete();
 
+        $password = isProduction() ? Hash::make('Str0ngP@ssw0rd') : Hash::make('password');
+
         $users = [
             [
                 'id' => 'b0eedd34-7705-4f36-8b13-c30673d058be',
@@ -35,7 +37,7 @@ class UserSeeder extends Seeder
                 'username' => 'admin',
                 'email' => 'admin@example.com',
                 'phone' => '081234567891',
-                'password' => Hash::make('password'),
+                'password' => $password,
                 'email_verified_at' => now(),
                 'is_active' => true,
                 'created_by' => null,

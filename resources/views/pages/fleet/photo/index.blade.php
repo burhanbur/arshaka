@@ -87,7 +87,7 @@
                         <tr>
                             <td>{{ $item->fleetCategory->name ?? '-' }}</td>
                             <td>
-                                <img src="{{ Storage::url($item->image_path) }}"
+                                <img src="{{ asset(Storage::url($item->image_path)) }}"
                                      alt="{{ $item->caption }}"
                                      style="width:70px;height:50px;object-fit:cover;border-radius:4px;">
                             </td>

@@ -37,7 +37,45 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\Fleet\FleetCategoryController;
 use App\Http\Controllers\Fleet\FleetPhotoController;
 
+use Spatie\Sitemap\SitemapGenerator;
+use Spatie\Sitemap\Tags\Url;
+use Carbon\Carbon;
+use App\Models\Post;
+use App\Models\Gallery;
+
 Auth::routes();
+
+Route::get('sitemap', function(){
+    $baseUrl = config('app.url', 'http://localhost');
+
+    // generate & ambil objek Sitemap agar bisa ditambah manual
+    $generator = SitemapGenerator::create($baseUrl);
+    $sitemap = $generator->getSitemap();
+
+    // contoh: tambahkan semua blog post dengan lastmod = updated_at, priority tinggi
+    foreach (Post::whereNotNull('published_at')->get() as $post) {
+        $sitemap->add(
+            Url::create(route('blog.show', $post->slug))
+                ->setLastModificationDate($post->updated_at)
+                ->setPriority(0.8)
+        );
+    }
+
+    // contoh: tambahkan galeri jika ingin
+    foreach (Gallery::where('is_active', true)->get() as $g) {
+        $sitemap->add(
+            Url::create(route('gallery')) // atau route per-item
+                ->setLastModificationDate($g->updated_at)
+                ->setPriority(0.5)
+        );
+    }
+
+    // simpan file (generator masih bisa dipakai untuk crawling otomatis jika diinginkan)
+    $sitemap->writeToFile(public_path('sitemap.xml'));
+
+    return redirect()->route('web.home')
+        ->with('notification', ['level' => 'success', 'message' => 'Sitemap berhasil digenerate.']);
+});
 
 // =====================================================================
 // PUBLIC – Company Profile Website

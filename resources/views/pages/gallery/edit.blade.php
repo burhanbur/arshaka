@@ -40,7 +40,7 @@
                     <div class="form-group">
                         <label>Foto Saat Ini</label>
                         <div class="mb-2">
-                            <img src="{{ Storage::url($data->image_path) }}" alt="{{ $data->title }}"
+                            <img src="{{ asset(Storage::url($data->image_path)) }}" alt="{{ $data->title }}"
                                  style="max-height:180px;border-radius:6px;object-fit:cover;">
                         </div>
                         <label>Ganti Foto (opsional)</label>

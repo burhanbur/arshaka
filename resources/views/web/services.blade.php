@@ -31,14 +31,14 @@
         {{-- Fallback photos per slug if no DB photos exist --}}
         @php
         $fallbackPhotos = [
-            'engkel'   => ['assets/images/truck/engkel.jpg'],
-            'double'   => ['assets/images/truck/cdd-longbox.jpg'],
+            'cde-longbox'   => ['assets/images/truck/cde-longbox.jpg'],
+            'cdd-longbox'   => ['assets/images/truck/cdd-longbox.jpg'],
             'fuso'     => ['assets/images/truck/fuso-long-wingbox-1.jpeg','assets/images/truck/fuso-long-wingbox-2.jpeg','assets/images/truck/fuso-long-wingbox-3.jpeg'],
-            'tronton'  => ['assets/images/truck/tronton-wingbox-1.jpeg','assets/images/truck/tronton-wingbox-2.jpeg'],
+            'tronton'  => ['assets/images/truck/tronton-wingbox.webp', 'assets/images/truck/tronton-wingbox-1.jpeg','assets/images/truck/tronton-wingbox-2.jpeg'],
         ];
         $fleetMeta = [
-            'engkel'  => ['badge'=>'Armada Kecil',    'badge_color'=>'var(--accent)',   'specs'=>[['Kapasitas Muatan','2 – 4 Ton'],['Dimensi Bak','± 3.5 x 1.8 m'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Jabodetabek & Jawa']]],
-            'double'  => ['badge'=>'Armada Menengah', 'badge_color'=>'var(--primary)',  'specs'=>[['Kapasitas Muatan','6 – 8 Ton'],['Dimensi Bak','± 5.5 x 2.1 m'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Seluruh Jawa & Bali']]],
+            'cde-longbox'  => ['badge'=>'Armada Kecil',    'badge_color'=>'var(--accent)',   'specs'=>[['Kapasitas Muatan','2 – 4 Ton'],['Dimensi Bak','± 3.5 x 1.8 m'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Jabodetabek & Jawa']]],
+            'cdd-longbox'  => ['badge'=>'Armada Menengah', 'badge_color'=>'var(--primary)',  'specs'=>[['Kapasitas Muatan','6 – 8 Ton'],['Dimensi Bak','± 5.5 x 2.1 m'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Seluruh Jawa & Bali']]],
             'fuso'    => ['badge'=>'Armada Besar',    'badge_color'=>'var(--accent)',   'specs'=>[['Kapasitas Muatan','10 – 15 Ton'],['Tipe Bak','Wingbox (Tertutup)'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Jawa & Sumatera']]],
             'tronton' => ['badge'=>'Armada Terbesar', 'badge_color'=>'var(--accent)',   'specs'=>[['Kapasitas Muatan','20 – 30 Ton'],['Tipe Bak','Wingbox (Tertutup)'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Seluruh Indonesia']]],
         ];
@@ -72,7 +72,7 @@
                     <div class="carousel-inner" style="max-height:340px;">
                         @foreach($dbPhotos as $pi => $photo)
                         <div class="carousel-item {{ $pi === 0 ? 'active' : '' }}">
-                            <img src="{{ Storage::url($photo->image_path) }}"
+                            <img src="{{ asset(Storage::url($photo->image_path)) }}"
                                  alt="{{ $photo->caption ?: $fleet->name }}"
                                  style="width:100%;height:340px;object-fit:cover;">
                             @if($photo->caption)
@@ -93,7 +93,7 @@
                 </div>
                 @elseif($hasDB)
                 {{-- Single DB photo --}}
-                <img src="{{ Storage::url($dbPhotos->first()->image_path) }}"
+                <img src="{{ asset(Storage::url($dbPhotos->first()->image_path)) }}"
                      alt="{{ $fleet->name }} Arshaka Logistik"
                      class="img-fluid rounded-3 shadow-sm" style="width:100%;object-fit:cover;max-height:340px;">
                 @elseif(count($fallbacks) > 1)

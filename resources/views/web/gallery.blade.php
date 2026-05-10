@@ -95,7 +95,7 @@
             <div class="gallery-card"
                  onclick="openLightbox({{ $i }})"
                  data-index="{{ $i }}">
-                <img src="{{ Storage::url($item->image_path) }}"
+                <img src="{{ asset(Storage::url($item->image_path)) }}"
                      alt="{{ $item->title }}"
                      loading="lazy">
                 <div class="gallery-card-overlay">
@@ -122,7 +122,7 @@
 @push('scripts')
 <script>
     const galleryItems = @json($galleries->map(fn($g) => [
-        'src'   => Storage::url($g->image_path),
+        'src'   => asset(Storage::url($g->image_path)),
         'title' => $g->title,
     ]));
 

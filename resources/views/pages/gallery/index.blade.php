@@ -68,7 +68,7 @@
                         <tr>
                             <td>{{ $index + 1 }}</td>
                             <td>
-                                <img src="{{ Storage::url($item->image_path) }}"
+                                <img src="{{ asset(Storage::url($item->image_path)) }}"
                                      alt="{{ $item->title }}"
                                      style="width:60px;height:45px;object-fit:cover;border-radius:4px;">
                             </td>

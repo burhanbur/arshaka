@@ -107,71 +107,135 @@
         </div>
 
         <div class="row g-4">
-            {{-- Truck Engkel --}}
+            {{-- CDE Long --}}
             <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
                 <div class="service-card" style="padding:0;overflow:hidden;">
-                    <img src="{{ asset('assets/images/truck/engkel.jpg') }}"
-                         alt="Truck Engkel" style="width:100%;height:165px;object-fit:cover;">
+                    <img src="{{ asset('assets/images/truck/cde-longbox.jpg') }}"
+                         alt="CDE Long" style="width:100%;height:245px;object-fit:cover;">
                     <div style="padding:1.4rem;">
-                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:.6rem;">Truck Engkel</h4>
-                        <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:.8rem;line-height:1.7;">
-                            Ideal untuk pengiriman dalam kota dengan muatan hingga 4 ton.
-                        </p>
-                        <ul style="color:var(--text-muted);font-size:.83rem;padding-left:1rem;margin:0;">
-                            <li>Kapasitas ±2–4 ton</li>
-                            <li>Jangkauan Jabodetabek</li>
-                        </ul>
+                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:1rem;">CDE Long</h4>
+                        <div style="display:flex;flex-direction:column;gap:.6rem;">
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-box" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Volume</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">12 m³</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-truck" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Muatan</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">2 – 3 ton</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-ruler-combined" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Dimensi (P x L x T)</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">4.2 x 1.7 x 1.9 m</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            {{-- Truck Double --}}
+            {{-- CDD Long --}}
             <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-card" style="padding:0;overflow:hidden;">
                     <img src="{{ asset('assets/images/truck/cdd-longbox.jpg') }}"
-                         alt="Truck Double" style="width:100%;height:165px;object-fit:cover;">
+                         alt="CDD Long" style="width:100%;height:245px;object-fit:cover;">
                     <div style="padding:1.4rem;">
-                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:.6rem;">Truck Double</h4>
-                        <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:.8rem;line-height:1.7;">
-                            Volume menengah dengan kapasitas angkut hingga 8 ton.
-                        </p>
-                        <ul style="color:var(--text-muted);font-size:.83rem;padding-left:1rem;margin:0;">
-                            <li>Kapasitas ±6–8 ton</li>
-                            <li>Seluruh Jawa & Bali</li>
-                        </ul>
+                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:1rem;">CDD Long</h4>
+                        <div style="display:flex;flex-direction:column;gap:.6rem;">
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-box" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Volume</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">35 – 40 m³</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-truck" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Muatan</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">7 – 8 ton</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-ruler-combined" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Dimensi (P x L x T)</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">7–8 x 2.3 x 2.5 m</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            {{-- Fuso Wingbox --}}
+            {{-- Fuso --}}
             <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-card" style="padding:0;overflow:hidden;">
                     <img src="{{ asset('assets/images/truck/fuso-long-wingbox-1.jpeg') }}"
-                         alt="Fuso Wingbox" style="width:100%;height:165px;object-fit:cover;">
+                         alt="Fuso" style="width:100%;height:245px;object-fit:cover;">
                     <div style="padding:1.4rem;">
-                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:.6rem;">Fuso Wingbox</h4>
-                        <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:.8rem;line-height:1.7;">
-                            Bak wingbox tertutup untuk proteksi kargo lintas kota.
-                        </p>
-                        <ul style="color:var(--text-muted);font-size:.83rem;padding-left:1rem;margin:0;">
-                            <li>Kapasitas ±10–15 ton</li>
-                            <li>Jawa & Sumatera</li>
-                        </ul>
+                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:1rem;">Fuso (Box, Bak, Wingbox)</h4>
+                        <div style="display:flex;flex-direction:column;gap:.6rem;">
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-box" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Volume</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">35 – 40 m³</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-truck" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Muatan</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">15 ton</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-ruler-combined" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Dimensi (P x L x T)</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">7–8 x 2.4–2.5 x 2.4–2.6 m</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            {{-- Tronton Wingbox --}}
+            {{-- Tronton --}}
             <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-card" style="padding:0;overflow:hidden;">
-                    <img src="{{ asset('assets/images/truck/tronton-wingbox-1.jpeg') }}"
-                         alt="Tronton Wingbox" style="width:100%;height:165px;object-fit:cover;">
+                    <img src="{{ asset('assets/images/truck/tronton-wingbox.webp') }}"
+                         alt="Tronton" style="width:100%;height:245px;object-fit:cover;">
                     <div style="padding:1.4rem;">
-                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:.6rem;">Tronton Wingbox</h4>
-                        <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:.8rem;line-height:1.7;">
-                            Armada terbesar untuk pengiriman lintas pulau kapasitas 30 ton.
-                        </p>
-                        <ul style="color:var(--text-muted);font-size:.83rem;padding-left:1rem;margin:0;">
-                            <li>Kapasitas ±20–30 ton</li>
-                            <li>Seluruh Indonesia</li>
-                        </ul>
+                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:1rem;">Tronton (Box, Bak, Wingbox)</h4>
+                        <div style="display:flex;flex-direction:column;gap:.6rem;">
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-box" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Volume</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">45 – 50 m³</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-truck" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Muatan</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">18 – 20 ton</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                                <i class="fas fa-ruler-combined" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
+                                <div>
+                                    <div style="font-size:.75rem;color:var(--text-muted);">Dimensi (P x L x T)</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">9–9.5 x 2.4–2.5 x 2.5–2.6 m</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
