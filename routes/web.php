@@ -40,6 +40,7 @@ use App\Http\Controllers\Fleet\FleetPhotoController;
 use Spatie\Sitemap\SitemapGenerator;
 use Spatie\Sitemap\Tags\Url;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 use App\Models\Post;
 use App\Models\Gallery;
 
@@ -49,7 +50,42 @@ Route::get('sitemap', function(){
     $baseUrl = config('app.url', 'http://localhost');
 
     // generate & ambil objek Sitemap agar bisa ditambah manual
-    $generator = SitemapGenerator::create($baseUrl);
+    $generator = SitemapGenerator::create($baseUrl)
+        ->hasCrawled(function (Url $url) {
+            $uri = $url->url;
+
+            // default priority
+            $url->setPriority(0.5);
+
+            // blog posts: try to extract slug and set lastmod from DB
+            if (Str::contains($uri, '/blog/')) {
+                $slug = basename(parse_url($uri, PHP_URL_PATH));
+                $post = Post::where('slug', $slug)->first();
+                if ($post) {
+                    $url->setLastModificationDate($post->updated_at);
+                    $url->setPriority(0.8);
+                } else {
+                    $url->setLastModificationDate(Carbon::now());
+                }
+
+            // gallery listing: set lastmod from latest gallery item
+            } elseif (Str::contains($uri, '/galeri')) {
+                $latest = Gallery::where('is_active', true)->latest('updated_at')->first();
+                if ($latest) {
+                    $url->setLastModificationDate($latest->updated_at);
+                } else {
+                    $url->setLastModificationDate(Carbon::now());
+                }
+                $url->setPriority(0.5);
+
+            // other pages: set to now (or customize as needed)
+            } else {
+                $url->setLastModificationDate(Carbon::now());
+            }
+
+            return $url;
+        });
+
     $sitemap = $generator->getSitemap();
 
     // contoh: tambahkan semua blog post dengan lastmod = updated_at, priority tinggi
