@@ -32,6 +32,10 @@ use App\Http\Controllers\Web\AboutController;
 use App\Http\Controllers\Web\ServiceController;
 use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\BlogController as WebBlogController;
+use App\Http\Controllers\Web\GalleryController as WebGalleryController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\Fleet\FleetCategoryController;
+use App\Http\Controllers\Fleet\FleetPhotoController;
 
 Auth::routes();
 
@@ -50,6 +54,9 @@ Route::group(['as' => 'web.'], function () {
     // Contact
     Route::get('/kontak',         [ContactController::class, 'index'])->name('contact');
     Route::post('/kontak',        [ContactController::class, 'store'])->name('contact.store');
+
+    // Gallery
+    Route::get('/galeri',         [WebGalleryController::class, 'index'])->name('gallery');
 });
 
 Route::get('component-ui', function() {
@@ -231,6 +238,39 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::get('/', [MessageController::class, 'index'])->name('message.index');
                 Route::get('show/{id}', [MessageController::class, 'show'])->name('message.show');
                 Route::delete('/{id}', [MessageController::class, 'destroy'])->name('message.destroy');
+            });
+
+            // -------------------- Gallery Routes --------------------- //
+            Route::group(['prefix' => 'gallery'], function () {
+                Route::get('/', [GalleryController::class, 'index'])->name('gallery.index');
+                Route::get('create', [GalleryController::class, 'create'])->name('gallery.create');
+                Route::get('edit/{id}', [GalleryController::class, 'edit'])->name('gallery.edit');
+                Route::post('/', [GalleryController::class, 'store'])->name('gallery.store');
+                Route::put('/{id}', [GalleryController::class, 'update'])->name('gallery.update');
+                Route::delete('/{id}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
+            });
+
+            // -------------------- Fleet Routes ----------------------- //
+            Route::group(['prefix' => 'fleet'], function () {
+
+                Route::group(['prefix' => 'category'], function () {
+                    Route::get('/', [FleetCategoryController::class, 'index'])->name('fleet.category.index');
+                    Route::get('create', [FleetCategoryController::class, 'create'])->name('fleet.category.create');
+                    Route::get('edit/{id}', [FleetCategoryController::class, 'edit'])->name('fleet.category.edit');
+                    Route::post('/', [FleetCategoryController::class, 'store'])->name('fleet.category.store');
+                    Route::put('/{id}', [FleetCategoryController::class, 'update'])->name('fleet.category.update');
+                    Route::delete('/{id}', [FleetCategoryController::class, 'destroy'])->name('fleet.category.destroy');
+                });
+
+                Route::group(['prefix' => 'photo'], function () {
+                    Route::get('/', [FleetPhotoController::class, 'index'])->name('fleet.photo.index');
+                    Route::get('create', [FleetPhotoController::class, 'create'])->name('fleet.photo.create');
+                    Route::get('edit/{id}', [FleetPhotoController::class, 'edit'])->name('fleet.photo.edit');
+                    Route::post('/', [FleetPhotoController::class, 'store'])->name('fleet.photo.store');
+                    Route::put('/{id}', [FleetPhotoController::class, 'update'])->name('fleet.photo.update');
+                    Route::delete('/{id}', [FleetPhotoController::class, 'destroy'])->name('fleet.photo.destroy');
+                });
+
             });
 
         });

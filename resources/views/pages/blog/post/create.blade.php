@@ -2,17 +2,26 @@
 
 @section('title', config('app.alias') . ' | Tulis Artikel Baru')
 
-@push('styles')
-{{-- TinyMCE or similar rich text editor can be loaded here --}}
-@endpush
-
 @push('scripts')
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
+    tinymce.init({
+        selector: '#postContent',
+        language: 'id',
+        height: 450,
+        menubar: false,
+        plugins: 'link lists image table code wordcount autoresize',
+        toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image | table | code',
+        content_style: 'body { font-family: Inter, sans-serif; font-size: 15px; line-height: 1.7; }',
+        setup: function(editor) {
+            editor.on('change', function() { editor.save(); });
+        }
+    });
+
     // Auto-generate slug from title
     document.addEventListener('DOMContentLoaded', function () {
         const titleInput = document.getElementById('postTitle');
         const slugInput  = document.getElementById('postSlug');
-
         titleInput.addEventListener('input', function () {
             const slug = this.value
                 .toLowerCase()
@@ -70,7 +79,7 @@
 
                             <div class="form-group">
                                 <label>Konten <b class="text-danger">*</b></label>
-                                <textarea class="form-control" name="content" rows="15"
+                                <textarea class="form-control" id="postContent" name="content" rows="15"
                                           placeholder="Tulis konten artikel di sini...">{{ old('content') }}</textarea>
                                 @error('content')
                                     <small class="text-danger">{{ $message }}</small>

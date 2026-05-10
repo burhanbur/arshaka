@@ -10,16 +10,16 @@
 ============================================================ --}}
 <section id="hero" style="
     min-height: 92vh;
-    background: linear-gradient(135deg, rgba(28,43,74,.92) 0%, rgba(28,43,74,.78) 60%, rgba(192,57,43,.55) 100%),
-                url('{{ asset('assets/images/hero-truck.jpg') }}') center/cover no-repeat;
+    background: linear-gradient(rgba(30,12,4,.72), rgba(30,12,4,.72)),
+                url('{{ asset('assets/images/truck/hero.jpg') }}') center/cover no-repeat;
     display: flex; align-items: center;
     position: relative; overflow: hidden;">
 
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-7" data-aos="fade-right">
-                <span style="display:inline-block;background:rgba(192,57,43,.2);color:#f09090;
-                             border:1px solid rgba(192,57,43,.4);border-radius:20px;
+                <span style="display:inline-block;background:rgba(196,132,42,.2);color:#E8A84C;
+                             border:1px solid rgba(196,132,42,.5);border-radius:20px;
                              font-size:.8rem;font-weight:600;letter-spacing:.1em;
                              padding:.3rem 1rem;text-transform:uppercase;margin-bottom:1.2rem;">
                     PT Arshaka Logistik Indonesia
@@ -107,94 +107,72 @@
         </div>
 
         <div class="row g-4">
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-                <div class="service-card">
-                    <div class="icon-wrap"><i class="fas fa-truck"></i></div>
-                    <h4 style="color:var(--primary);font-size:1.15rem;margin-bottom:.7rem;">Penyewaan Truck Engkel</h4>
-                    <p style="color:var(--text-muted);font-size:.93rem;margin-bottom:1rem;">
-                        Ideal untuk pengiriman dalam kota dan antar kota dengan muatan hingga 4 ton.
-                        Cocok untuk usaha kecil menengah.
-                    </p>
-                    <ul style="color:var(--text-muted);font-size:.88rem;padding-left:1.1rem;margin:0;">
-                        <li>Kapasitas muat ±2–4 ton</li>
-                        <li>Armada tahun 2016 ke atas</li>
-                        <li>Driver berpengalaman & bersertifikasi</li>
-                    </ul>
+            {{-- Truck Engkel --}}
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-card" style="padding:0;overflow:hidden;">
+                    <img src="{{ asset('assets/images/truck/engkel.jpg') }}"
+                         alt="Truck Engkel" style="width:100%;height:165px;object-fit:cover;">
+                    <div style="padding:1.4rem;">
+                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:.6rem;">Truck Engkel</h4>
+                        <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:.8rem;line-height:1.7;">
+                            Ideal untuk pengiriman dalam kota dengan muatan hingga 4 ton.
+                        </p>
+                        <ul style="color:var(--text-muted);font-size:.83rem;padding-left:1rem;margin:0;">
+                            <li>Kapasitas ±2–4 ton</li>
+                            <li>Jangkauan Jabodetabek</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-card">
-                    <div class="icon-wrap"><i class="fas fa-truck-moving"></i></div>
-                    <h4 style="color:var(--primary);font-size:1.15rem;margin-bottom:.7rem;">Penyewaan Truck Double</h4>
-                    <p style="color:var(--text-muted);font-size:.93rem;margin-bottom:1rem;">
-                        Kapasitas lebih besar untuk kebutuhan distribusi volume menengah.
-                        Tersedia dengan berbagai konfigurasi bak.
-                    </p>
-                    <ul style="color:var(--text-muted);font-size:.88rem;padding-left:1.1rem;margin:0;">
-                        <li>Kapasitas muat ±6–8 ton</li>
-                        <li>Akses mudah ke tol Jagorawi</li>
-                        <li>Jangkauan Jabodetabek & Jawa</li>
-                    </ul>
+            {{-- Truck Double --}}
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card" style="padding:0;overflow:hidden;">
+                    <img src="{{ asset('assets/images/truck/cdd-longbox.jpg') }}"
+                         alt="Truck Double" style="width:100%;height:165px;object-fit:cover;">
+                    <div style="padding:1.4rem;">
+                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:.6rem;">Truck Double</h4>
+                        <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:.8rem;line-height:1.7;">
+                            Volume menengah dengan kapasitas angkut hingga 8 ton.
+                        </p>
+                        <ul style="color:var(--text-muted);font-size:.83rem;padding-left:1rem;margin:0;">
+                            <li>Kapasitas ±6–8 ton</li>
+                            <li>Seluruh Jawa & Bali</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-card">
-                    <div class="icon-wrap"><i class="fas fa-shipping-fast"></i></div>
-                    <h4 style="color:var(--primary);font-size:1.15rem;margin-bottom:.7rem;">Fuso / Tronton Wingbox</h4>
-                    <p style="color:var(--text-muted);font-size:.93rem;margin-bottom:1rem;">
-                        Armada besar untuk muatan berat dan pengiriman lintas pulau.
-                        Dilengkapi bak tertutup (wingbox) untuk keamanan kargo.
-                    </p>
-                    <ul style="color:var(--text-muted);font-size:.88rem;padding-left:1.1rem;margin:0;">
-                        <li>Kapasitas muat ±15–30 ton</li>
-                        <li>Wingbox – aman dari cuaca & pencurian</li>
-                        <li>Rute seluruh Indonesia</li>
-                    </ul>
+            {{-- Fuso Wingbox --}}
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card" style="padding:0;overflow:hidden;">
+                    <img src="{{ asset('assets/images/truck/fuso-long-wingbox-1.jpeg') }}"
+                         alt="Fuso Wingbox" style="width:100%;height:165px;object-fit:cover;">
+                    <div style="padding:1.4rem;">
+                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:.6rem;">Fuso Wingbox</h4>
+                        <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:.8rem;line-height:1.7;">
+                            Bak wingbox tertutup untuk proteksi kargo lintas kota.
+                        </p>
+                        <ul style="color:var(--text-muted);font-size:.83rem;padding-left:1rem;margin:0;">
+                            <li>Kapasitas ±10–15 ton</li>
+                            <li>Jawa & Sumatera</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-                <div class="service-card">
-                    <div class="icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
-                    <h4 style="color:var(--primary);font-size:1.15rem;margin-bottom:.7rem;">Tracking Real-Time</h4>
-                    <p style="color:var(--text-muted);font-size:.93rem;margin-bottom:1rem;">
-                        Pantau posisi armada Anda secara langsung melalui sistem GPS tracking digital
-                        yang terintegrasi.
-                    </p>
-                    <ul style="color:var(--text-muted);font-size:.88rem;padding-left:1.1rem;margin:0;">
-                        <li>GPS aktif 24 jam penuh</li>
-                        <li>Notifikasi status pengiriman</li>
-                        <li>Laporan perjalanan lengkap</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-card">
-                    <div class="icon-wrap"><i class="fas fa-clock"></i></div>
-                    <h4 style="color:var(--primary);font-size:1.15rem;margin-bottom:.7rem;">Pengiriman Tepat Waktu</h4>
-                    <p style="color:var(--text-muted);font-size:.93rem;margin-bottom:1rem;">
-                        Kami berkomitmen pada SLA ketepatan waktu yang tinggi demi kelancaran
-                        rantai pasok bisnis Anda.
-                    </p>
-                    <ul style="color:var(--text-muted);font-size:.88rem;padding-left:1.1rem;margin:0;">
-                        <li>On-time delivery commitment</li>
-                        <li>Standar prosedur keamanan ketat</li>
-                        <li>Asuransi kargo tersedia</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-card">
-                    <div class="icon-wrap"><i class="fas fa-globe-asia"></i></div>
-                    <h4 style="color:var(--primary);font-size:1.15rem;margin-bottom:.7rem;">Jangkauan Seluruh Indonesia</h4>
-                    <p style="color:var(--text-muted);font-size:.93rem;margin-bottom:1rem;">
-                        Dari Sabang sampai Merauke, kami siap mengantarkan kargo Anda
-                        ke seluruh penjuru nusantara.
-                    </p>
-                    <ul style="color:var(--text-muted);font-size:.88rem;padding-left:1.1rem;margin:0;">
-                        <li>Rute Jawa, Sumatera, Kalimantan</li>
-                        <li>Sulawesi, Bali & Nusa Tenggara</li>
-                        <li>Koordinasi armada terpusat</li>
-                    </ul>
+            {{-- Tronton Wingbox --}}
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card" style="padding:0;overflow:hidden;">
+                    <img src="{{ asset('assets/images/truck/tronton-wingbox-1.jpeg') }}"
+                         alt="Tronton Wingbox" style="width:100%;height:165px;object-fit:cover;">
+                    <div style="padding:1.4rem;">
+                        <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:.6rem;">Tronton Wingbox</h4>
+                        <p style="color:var(--text-muted);font-size:.88rem;margin-bottom:.8rem;line-height:1.7;">
+                            Armada terbesar untuk pengiriman lintas pulau kapasitas 30 ton.
+                        </p>
+                        <ul style="color:var(--text-muted);font-size:.83rem;padding-left:1rem;margin:0;">
+                            <li>Kapasitas ±20–30 ton</li>
+                            <li>Seluruh Indonesia</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -345,6 +323,53 @@
 @endif
 
 {{-- ============================================================
+     KLIEN KAMI
+============================================================ --}}
+<section id="clients" class="section section-light">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <h2 class="section-title">Klien Kami</h2>
+            <span class="divider-accent"></span>
+            <p class="section-subtitle">Dipercaya oleh berbagai perusahaan terkemuka di Indonesia.</p>
+        </div>
+        <div class="row g-4 align-items-center justify-content-center">
+            @php
+            $clients = [
+                ['logo' => 'assets/images/client/jne-express.png',    'name' => 'JNE Express'],
+                ['logo' => 'assets/images/client/jnt-express.jpeg',   'name' => 'J&T Express'],
+                ['logo' => 'assets/images/client/jnt-cargo.jpg',      'name' => 'J&T Cargo'],
+                ['logo' => 'assets/images/client/spx.png',            'name' => 'Shopee Express'],
+                ['logo' => 'assets/images/client/sdn-distribution.png','name' => 'SDN Distribution'],
+                ['logo' => 'assets/images/client/gree.png',           'name' => 'Gree'],
+            ];
+            @endphp
+            @foreach($clients as $i => $client)
+            <div class="col-6 col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="{{ ($i % 3) * 80 }}">
+                <div style="background:#fff;border-radius:10px;padding:1.8rem 1rem;
+                            text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.05);
+                            transition:transform .2s,box-shadow .2s;height:100%;
+                            display:flex;align-items:center;justify-content:center;"
+                     onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 28px rgba(0,0,0,.1)'"
+                     onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.05)'">
+                    <img src="{{ asset($client['logo']) }}"
+                         alt="{{ $client['name'] }}"
+                         style="max-height:55px;max-width:130px;width:100%;object-fit:contain;
+                                filter:grayscale(25%);transition:filter .2s;"
+                         onmouseover="this.style.filter='grayscale(0%)'"
+                         onmouseout="this.style.filter='grayscale(25%)'">
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="{{ route('web.contact') }}" class="btn-primary-custom">
+                <i class="fas fa-handshake me-2"></i>Bergabung Bersama Klien Kami
+            </a>
+        </div>
+    </div>
+</section>
+
+{{-- ============================================================
      CTA BANNER
 ============================================================ --}}
 <section id="cta" style="
@@ -362,7 +387,7 @@
             <a href="{{ route('web.contact') }}" class="btn-outline-custom">
                 <i class="fas fa-envelope me-2"></i>Kirim Pesan
             </a>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener"
+            <a href="https://wa.me/6281511015666" target="_blank" rel="noopener"
                style="background:#fff;color:var(--accent);border:2px solid #fff;
                       border-radius:4px;padding:.7rem 2rem;font-weight:600;font-size:.95rem;
                       text-decoration:none;transition:background .2s;"

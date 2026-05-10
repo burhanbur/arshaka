@@ -369,6 +369,30 @@ class RouteSeeder extends Seeder
             ['name' => 'message.index',   'method' => 'GET',    'module' => 'Messages', 'description' => 'Menampilkan daftar pesan masuk',  'created_by' => null, 'updated_by' => null],
             ['name' => 'message.show',    'method' => 'GET',    'module' => 'Messages', 'description' => 'Menampilkan detail pesan',         'created_by' => null, 'updated_by' => null],
             ['name' => 'message.destroy', 'method' => 'DELETE', 'module' => 'Messages', 'description' => 'Menghapus pesan',                  'created_by' => null, 'updated_by' => null],
+
+            // Gallery
+            ['name' => 'gallery.index',   'method' => 'GET',    'module' => 'Gallery', 'description' => 'Menampilkan daftar foto galeri',    'created_by' => null, 'updated_by' => null],
+            ['name' => 'gallery.create',  'method' => 'GET',    'module' => 'Gallery', 'description' => 'Form tambah foto galeri',           'created_by' => null, 'updated_by' => null],
+            ['name' => 'gallery.store',   'method' => 'POST',   'module' => 'Gallery', 'description' => 'Simpan foto galeri baru',           'created_by' => null, 'updated_by' => null],
+            ['name' => 'gallery.edit',    'method' => 'GET',    'module' => 'Gallery', 'description' => 'Form edit foto galeri',             'created_by' => null, 'updated_by' => null],
+            ['name' => 'gallery.update',  'method' => 'PUT',    'module' => 'Gallery', 'description' => 'Perbarui foto galeri',              'created_by' => null, 'updated_by' => null],
+            ['name' => 'gallery.destroy', 'method' => 'DELETE', 'module' => 'Gallery', 'description' => 'Hapus foto galeri',                 'created_by' => null, 'updated_by' => null],
+
+            // Fleet Categories
+            ['name' => 'fleet.category.index',   'method' => 'GET',    'module' => 'Fleet', 'description' => 'Menampilkan kategori armada',        'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.category.create',  'method' => 'GET',    'module' => 'Fleet', 'description' => 'Form tambah kategori armada',        'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.category.store',   'method' => 'POST',   'module' => 'Fleet', 'description' => 'Simpan kategori armada baru',        'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.category.edit',    'method' => 'GET',    'module' => 'Fleet', 'description' => 'Form edit kategori armada',          'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.category.update',  'method' => 'PUT',    'module' => 'Fleet', 'description' => 'Perbarui kategori armada',           'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.category.destroy', 'method' => 'DELETE', 'module' => 'Fleet', 'description' => 'Hapus kategori armada',              'created_by' => null, 'updated_by' => null],
+
+            // Fleet Photos
+            ['name' => 'fleet.photo.index',   'method' => 'GET',    'module' => 'Fleet', 'description' => 'Menampilkan foto armada',              'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.photo.create',  'method' => 'GET',    'module' => 'Fleet', 'description' => 'Form tambah foto armada',              'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.photo.store',   'method' => 'POST',   'module' => 'Fleet', 'description' => 'Simpan foto armada baru',              'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.photo.edit',    'method' => 'GET',    'module' => 'Fleet', 'description' => 'Form edit foto armada',                'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.photo.update',  'method' => 'PUT',    'module' => 'Fleet', 'description' => 'Perbarui foto armada',                 'created_by' => null, 'updated_by' => null],
+            ['name' => 'fleet.photo.destroy', 'method' => 'DELETE', 'module' => 'Fleet', 'description' => 'Hapus foto armada',                   'created_by' => null, 'updated_by' => null],
         ];
 
         foreach ($routes as $route) {

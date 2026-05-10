@@ -6,7 +6,8 @@
 @section('content')
 
 {{-- ===== PAGE HEADER ===== --}}
-<section style="background:linear-gradient(135deg,var(--primary) 60%,rgba(192,57,43,.7) 100%);
+<section style="background: linear-gradient(rgba(30,12,4,.68), rgba(30,12,4,.68)),
+                url('{{ asset('assets/images/truck/hero.jpg') }}') center/cover no-repeat;
                 padding:90px 0 60px;">
     <div class="container text-center" data-aos="fade-up">
         <h1 style="color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.6rem;">Blog & Artikel</h1>

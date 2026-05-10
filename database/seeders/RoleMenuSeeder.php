@@ -158,6 +158,40 @@ class RoleMenuSeeder extends Seeder
             ]);
         }
 
+        // ADM role - Manajemen Galeri
+        $galleryMenu = Menu::where('name', 'Manajemen Galeri')->first();
+        $galleryIndexRoute = Route::where('name', 'gallery.index')->first();
+
+        if ($adminRole && $galleryMenu && $galleryIndexRoute) {
+            RoleMenu::create([
+                'parent_id' => null,
+                'role_id' => $adminRole->id,
+                'menu_id' => $galleryMenu->id,
+                'route_id' => $galleryIndexRoute->id,
+                'sequence' => 3,
+                'is_active' => true,
+                'created_by' => null,
+                'updated_by' => null,
+            ]);
+        }
+
+        // ADM role - Manajemen Armada
+        $fleetMenu = Menu::where('name', 'Manajemen Armada')->first();
+        $fleetIndexRoute = Route::where('name', 'fleet.category.index')->first();
+
+        if ($adminRole && $fleetMenu && $fleetIndexRoute) {
+            RoleMenu::create([
+                'parent_id' => null,
+                'role_id' => $adminRole->id,
+                'menu_id' => $fleetMenu->id,
+                'route_id' => $fleetIndexRoute->id,
+                'sequence' => 4,
+                'is_active' => true,
+                'created_by' => null,
+                'updated_by' => null,
+            ]);
+        }
+
         // $this->command->info('RoleMenu seeder completed successfully!');
     }
 }

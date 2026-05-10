@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WW6ZT62V');</script>
+    <!-- End Google Tag Manager -->
+
     {{-- Primary Meta Tags --}}
     <title>@yield('title', 'PT Arshaka Logistik Indonesia – Empowering Business, Connecting Indonesia')</title>
     <meta name="description" content="@yield('meta_description', 'PT Arshaka Logistik Indonesia menyediakan jasa penyewaan truck dan pengiriman barang ke seluruh Indonesia dengan armada modern dan driver bersertifikasi.')">
@@ -35,14 +43,14 @@
 
     <style>
         :root {
-            --primary:      #1C2B4A;
-            --primary-light:#253666;
-            --accent:       #C0392B;
-            --accent-dark:  #922B21;
-            --light-bg:     #F5F7FA;
-            --text-dark:    #2D3748;
-            --text-muted:   #718096;
-            --border-color: #E2E8F0;
+            --primary:      #3D1F0C;
+            --primary-light:#5C3018;
+            --accent:       #C4842A;
+            --accent-dark:  #A06820;
+            --light-bg:     #FDF8F2;
+            --text-dark:    #2D1A0E;
+            --text-muted:   #7A6055;
+            --border-color: #EBE0D6;
         }
 
         * { box-sizing: border-box; }
@@ -106,7 +114,7 @@
             letter-spacing: 0 !important;
             border-bottom: none !important;
         }
-        .btn-nav-cta:hover { background: var(--accent-dark) !important; }
+        .btn-nav-cta:hover { background: var(--accent-dark) !important; color: #fff !important; }
 
         /* ===== SECTION HELPERS ===== */
         .section { padding: 80px 0; }
@@ -309,12 +317,17 @@
     @stack('styles')
 </head>
 <body>
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW6ZT62V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 {{-- ===== NAVBAR ===== --}}
 <nav id="mainNav" class="navbar navbar-expand-lg sticky-top" aria-label="Navigasi utama">
     <div class="container">
         <a class="navbar-brand" href="{{ route('web.home') }}">
-            ARSHAKA <span>LOGISTIK</span>
+            ARSHAKA <span>LOGISTIK INDONESIA</span>
         </a>
         <button class="navbar-toggler border-0" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navMenu"
@@ -340,6 +353,10 @@
                        href="{{ route('web.blog.index') }}">Blog</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('web.gallery') ? 'active' : '' }}"
+                       href="{{ route('web.gallery') }}">Galeri</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn-nav-cta {{ request()->routeIs('web.contact') ? 'active' : '' }}"
                        href="{{ route('web.contact') }}">Hubungi Kami</a>
                 </li>
@@ -356,7 +373,7 @@
     <div class="container">
         <div class="row g-4 pb-4">
             <div class="col-lg-4">
-                <div class="footer-brand mb-3">ARSHAKA <span>LOGISTIK</span></div>
+                <div class="footer-brand mb-3">ARSHAKA <span>LOGISTIK INDONESIA</span></div>
                 <p style="font-size:.9rem; line-height:1.8;">
                     PT Arshaka Logistik Indonesia – mitra terpercaya jasa transportasi dan logistik darat
                     ke seluruh Indonesia. Armada modern, driver bersertifikasi, tracking real-time.
@@ -390,11 +407,10 @@
 
             <div class="col-6 col-lg-3">
                 <h6>Layanan</h6>
-                <a href="{{ route('web.services') }}">Penyewaan Truck Engkel</a>
-                <a href="{{ route('web.services') }}">Penyewaan Truck Double</a>
-                <a href="{{ route('web.services') }}">Fuso / Tronton Wingbox</a>
-                <a href="{{ route('web.services') }}">Tracking Real-Time</a>
-                <a href="{{ route('web.services') }}">Pengiriman Seluruh Indonesia</a>
+                <a href="{{ route('web.services') }}#engkel">Truck Engkel</a>
+                <a href="{{ route('web.services') }}#double">Truck Double</a>
+                <a href="{{ route('web.services') }}#fuso">Fuso Wingbox</a>
+                <a href="{{ route('web.services') }}#tronton">Tronton Wingbox</a>
             </div>
 
             <div class="col-lg-3">

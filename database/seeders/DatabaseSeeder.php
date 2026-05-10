@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
                 MenuSeeder::class,
                 RoleMenuSeeder::class,
                 RolePermissionSeeder::class,
+                FleetCategorySeeder::class,
             ]);
 
             DB::commit();

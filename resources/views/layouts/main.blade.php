@@ -12,7 +12,7 @@
 	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " style="height:75px">
 		<div class="kt-header-mobile__logo">
 			<a href="{{ url('/') }}">
-				<img alt="{{ config('app.name') }}" src="{{ asset('assets/images/sidebar-logo.png') }}" width="120px" />
+				<img alt="{{ config('app.name') }}" src="{{ asset('assets/images/logo.png') }}" width="120px" />
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">

@@ -6,7 +6,8 @@
 @section('content')
 
 {{-- ===== PAGE HEADER ===== --}}
-<section style="background:linear-gradient(135deg,var(--primary) 60%,rgba(192,57,43,.7) 100%);
+<section style="background: linear-gradient(rgba(30,12,4,.68), rgba(30,12,4,.68)),
+                url('{{ asset('assets/images/truck/hero.jpg') }}') center/cover no-repeat;
                 padding:90px 0 60px;">
     <div class="container text-center" data-aos="fade-up">
         <h1 style="color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.6rem;">Hubungi Kami</h1>
@@ -230,7 +231,7 @@
             dari https://maps.google.com/ → Share → Embed a map
         --}}
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2233488219147!2d106.79580427499043!3d-6.481072193500001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c4d5bfffffff%3A0x1!2sBojong%20Gede%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.77434819325313!2d106.80398512801803!3d-6.4722383315137675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1778385496194!5m2!1sen!2sid"
             width="100%" height="420" style="border:0;" allowfullscreen=""
             loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             title="Lokasi PT Arshaka Logistik Indonesia">

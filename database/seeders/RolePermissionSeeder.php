@@ -123,6 +123,28 @@ class RolePermissionSeeder extends Seeder
                     'created_by' => null,
                 ]);
             }
+
+            // ADM role - Manajemen Galeri
+            $galleryRoutes = Route::where('module', 'Gallery')->get();
+
+            foreach ($galleryRoutes as $route) {
+                RolePermission::create([
+                    'role_id' => $adminRole->id,
+                    'route_id' => $route->id,
+                    'created_by' => null,
+                ]);
+            }
+
+            // ADM role - Manajemen Armada
+            $fleetRoutes = Route::where('module', 'Fleet')->get();
+
+            foreach ($fleetRoutes as $route) {
+                RolePermission::create([
+                    'role_id' => $adminRole->id,
+                    'route_id' => $route->id,
+                    'created_by' => null,
+                ]);
+            }
         }
     }
 }

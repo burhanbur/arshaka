@@ -3,8 +3,20 @@
 @section('title', config('app.alias') . ' | Edit Artikel')
 
 @push('scripts')
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
-    // No auto-slug on edit to avoid breaking existing URLs
+    tinymce.init({
+        selector: '#postContent',
+        language: 'id',
+        height: 450,
+        menubar: false,
+        plugins: 'link lists image table code wordcount autoresize',
+        toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist | link image | table | code',
+        content_style: 'body { font-family: Inter, sans-serif; font-size: 15px; line-height: 1.7; }',
+        setup: function(editor) {
+            editor.on('change', function() { editor.save(); });
+        }
+    });
 </script>
 @endpush
 
@@ -54,7 +66,7 @@
 
                             <div class="form-group">
                                 <label>Konten <b class="text-danger">*</b></label>
-                                <textarea class="form-control" name="content" rows="15">{{ old('content', $data->content) }}</textarea>
+                                <textarea class="form-control" id="postContent" name="content" rows="15">{{ old('content', $data->content) }}</textarea>
                                 @error('content')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror

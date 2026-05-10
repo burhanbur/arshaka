@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.alias') }} | Login</title>
-    <link rel="icon" href="{{ asset('assets/images/favicon.svg') }}" type="image/svg+xml">
+    <link rel="icon" href="{{ asset('assets/images/logo.png') }}" type="image/svg+xml">
     <link rel="alternate icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
     <!-- Bootstrap CSS (CDN) -->
@@ -23,7 +23,7 @@
 <div class="login-container">
     <div class="card card-login">
         <div class="card-header-custom">
-            <img src="{{ asset('assets/images/logo-white.png') }}" alt="Logo" class="brand-logo">
+            <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" class="brand-logo">
         </div>
 
         <div class="form-section">
@@ -95,7 +95,7 @@
                     </button>
                 </div>
 
-                <div class="divider">
+                {{-- <div class="divider">
                     <span class="divider-text">atau masuk dengan</span>
                 </div>
 
@@ -105,7 +105,7 @@
                             <i class="fa fa-key me-2" style="color: var(--primary);"></i>SSO
                         </button>
                     </div>
-                </div>
+                </div> --}}
 
                 {{-- <div class="text-center" style="color: var(--text-muted); font-size: 14px;">
                     Belum punya akun? <a href="#">Daftar sekarang</a>
