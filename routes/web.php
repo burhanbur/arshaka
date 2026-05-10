@@ -72,7 +72,7 @@ Route::get('sitemap', function(){
 
     // determine output path: in production site root is ../../public_html
     if (isProduction()) {
-        $publicPath = base_path('../../public_html/sitemap.xml');
+        $publicPath = base_path('../public_html/sitemap.xml');
     } else {
         $publicPath = public_path('sitemap.xml');
     }
