@@ -346,7 +346,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('web.services')? 'active' : '' }}"
-                       href="{{ route('web.services') }}">Layanan</a>
+                       href="{{ route('web.services') }}">Armada Kami</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('web.blog*')   ? 'active' : '' }}"

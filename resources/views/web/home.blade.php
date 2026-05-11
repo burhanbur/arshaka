@@ -10,25 +10,27 @@
 ============================================================ --}}
 <section id="hero" style="
     min-height: 92vh;
-    background: linear-gradient(rgba(30,12,4,.72), rgba(30,12,4,.72)),
-                url('{{ asset('assets/images/truck/hero.jpg') }}') center/cover no-repeat;
+    background: url('{{ asset('assets/images/truck/hero.jpg') }}') center/cover no-repeat;
     display: flex; align-items: center;
     position: relative; overflow: hidden;">
 
     <div class="container py-5">
         <div class="row align-items-center">
-            <div class="col-lg-7" data-aos="fade-right">
+            <div class="col-lg-7" data-aos="fade-right"
+                 style="background:rgba(255,255,255,.72);backdrop-filter:blur(6px);
+                        -webkit-backdrop-filter:blur(6px);
+                        border-radius:16px;padding:2.5rem 2rem;">
                 <span style="display:inline-block;background:rgba(196,132,42,.2);color:#E8A84C;
                              border:1px solid rgba(196,132,42,.5);border-radius:20px;
                              font-size:.8rem;font-weight:600;letter-spacing:.1em;
                              padding:.3rem 1rem;text-transform:uppercase;margin-bottom:1.2rem;">
                     PT Arshaka Logistik Indonesia
                 </span>
-                <h1 style="font-size:clamp(2rem,5vw,3.6rem);color:#fff;line-height:1.2;margin-bottom:1rem;">
+                <h1 style="font-size:clamp(2rem,5vw,3.6rem);color:var(--primary);line-height:1.2;margin-bottom:1rem;">
                     Empowering Business,<br>
                     <span style="color:var(--accent);">Connecting Indonesia.</span>
                 </h1>
-                <p style="color:rgba(255,255,255,.85);font-size:1.1rem;max-width:540px;margin-bottom:2rem;line-height:1.8;">
+                <p style="color:var(--text-dark);font-size:1.1rem;max-width:540px;margin-bottom:2rem;line-height:1.8;">
                     Kami hadir untuk memenuhi kebutuhan distribusi barang ke seluruh Indonesia.
                     Armada terawat rata-rata tahun 2016 ke atas, driver bersertifikasi, dan
                     sistem tracking berbasis teknologi digital real-time.
@@ -37,7 +39,8 @@
                     <a href="{{ route('web.contact') }}" class="btn-primary-custom">
                         <i class="fas fa-phone-alt me-2"></i>Konsultasi Gratis
                     </a>
-                    <a href="{{ route('web.services') }}" class="btn-outline-custom">
+                    <a href="{{ route('web.services') }}" class="btn-outline-custom"
+                       style="color:var(--primary);border-color:var(--primary);">
                         <i class="fas fa-truck me-2"></i>Lihat Layanan
                     </a>
                 </div>
@@ -47,7 +50,7 @@
 
     {{-- Scroll indicator --}}
     <a href="#stats" style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
-                             color:rgba(255,255,255,.5);font-size:.8rem;text-align:center;
+                             color:rgba(61,31,12,.5);font-size:.8rem;text-align:center;
                              text-decoration:none;animation:bounce 2s infinite;"
        aria-label="Scroll ke bawah">
         <i class="fas fa-chevron-down fa-lg"></i>
@@ -209,7 +212,7 @@
             {{-- Tronton --}}
             <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-card" style="padding:0;overflow:hidden;">
-                    <img src="{{ asset('assets/images/truck/tronton-wingbox.webp') }}"
+                    <img src="{{ asset('assets/images/truck/tronton-wingbox-3.jpeg') }}"
                          alt="Tronton" style="width:100%;height:245px;object-fit:cover;">
                     <div style="padding:1.4rem;">
                         <h4 style="color:var(--primary);font-size:1.05rem;margin-bottom:1rem;">Tronton (Box, Bak, Wingbox)</h4>

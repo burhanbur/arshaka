@@ -33,14 +33,30 @@
         $fallbackPhotos = [
             'cde-longbox'   => ['assets/images/truck/cde-longbox.jpg'],
             'cdd-longbox'   => ['assets/images/truck/cdd-longbox.jpg'],
-            'fuso'     => ['assets/images/truck/fuso-long-wingbox-1.jpeg','assets/images/truck/fuso-long-wingbox-2.jpeg','assets/images/truck/fuso-long-wingbox-3.jpeg'],
-            'tronton'  => ['assets/images/truck/tronton-wingbox.webp', 'assets/images/truck/tronton-wingbox-1.jpeg','assets/images/truck/tronton-wingbox-2.jpeg'],
+            'fuso'     => ['assets/images/truck/fuso-long-wingbox-1.jpeg'],
+            'tronton'  => ['assets/images/truck/tronton-wingbox-3.jpeg'],
         ];
         $fleetMeta = [
-            'cde-longbox'  => ['badge'=>'Armada Kecil',    'badge_color'=>'var(--accent)',   'specs'=>[['Kapasitas Muatan','2 – 4 Ton'],['Dimensi Bak','± 3.5 x 1.8 m'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Jabodetabek & Jawa']]],
-            'cdd-longbox'  => ['badge'=>'Armada Menengah', 'badge_color'=>'var(--primary)',  'specs'=>[['Kapasitas Muatan','6 – 8 Ton'],['Dimensi Bak','± 5.5 x 2.1 m'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Seluruh Jawa & Bali']]],
-            'fuso'    => ['badge'=>'Armada Besar',    'badge_color'=>'var(--accent)',   'specs'=>[['Kapasitas Muatan','10 – 15 Ton'],['Tipe Bak','Wingbox (Tertutup)'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Jawa & Sumatera']]],
-            'tronton' => ['badge'=>'Armada Terbesar', 'badge_color'=>'var(--accent)',   'specs'=>[['Kapasitas Muatan','20 – 30 Ton'],['Tipe Bak','Wingbox (Tertutup)'],['Tahun Armada','2016 ke atas'],['Area Jangkauan','Seluruh Indonesia']]],
+            'cde-longbox'  => ['badge'=>'Armada Kecil',    'badge_color'=>'var(--accent)',  'specs'=>[
+                ['icon'=>'fas fa-box',            'label'=>'Volume',           'value'=>'12 m³'],
+                ['icon'=>'fas fa-truck',           'label'=>'Muatan',           'value'=>'2 – 3 ton'],
+                ['icon'=>'fas fa-ruler-combined',  'label'=>'Dimensi (P×L×T)', 'value'=>'4.2 × 1.7 × 1.9 m'],
+            ]],
+            'cdd-longbox'  => ['badge'=>'Armada Menengah', 'badge_color'=>'var(--primary)', 'specs'=>[
+                ['icon'=>'fas fa-box',            'label'=>'Volume',           'value'=>'35 – 40 m³'],
+                ['icon'=>'fas fa-truck',           'label'=>'Muatan',           'value'=>'7 – 8 ton'],
+                ['icon'=>'fas fa-ruler-combined',  'label'=>'Dimensi (P×L×T)', 'value'=>'7–8 × 2.3 × 2.5 m'],
+            ]],
+            'fuso'    => ['badge'=>'Armada Besar',    'badge_color'=>'var(--accent)',  'specs'=>[
+                ['icon'=>'fas fa-box',            'label'=>'Volume',           'value'=>'35 – 40 m³'],
+                ['icon'=>'fas fa-truck',           'label'=>'Muatan',           'value'=>'15 ton'],
+                ['icon'=>'fas fa-ruler-combined',  'label'=>'Dimensi (P×L×T)', 'value'=>'7–8 × 2.4–2.5 × 2.4–2.6 m'],
+            ]],
+            'tronton' => ['badge'=>'Armada Terbesar', 'badge_color'=>'var(--accent)',  'specs'=>[
+                ['icon'=>'fas fa-box',            'label'=>'Volume',           'value'=>'45 – 50 m³'],
+                ['icon'=>'fas fa-truck',           'label'=>'Muatan',           'value'=>'18 – 20 ton'],
+                ['icon'=>'fas fa-ruler-combined',  'label'=>'Dimensi (P×L×T)', 'value'=>'9–9.5 × 2.4–2.5 × 2.5–2.6 m'],
+            ]],
         ];
         @endphp
 
@@ -147,12 +163,13 @@
                 <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1.3rem;">{{ $fleet->description }}</p>
                 @endif
                 @if(count($meta['specs']))
-                <div class="row g-2 mb-3">
+                <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.3rem;">
                     @foreach($meta['specs'] as $spec)
-                    <div class="col-6">
-                        <div style="background:var(--light-bg);border-radius:8px;padding:.8rem 1rem;">
-                            <div style="font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;">{{ $spec[0] }}</div>
-                            <div style="font-weight:700;color:var(--primary);font-size:.95rem;margin-top:.2rem;">{{ $spec[1] }}</div>
+                    <div style="display:flex;align-items:flex-start;gap:.75rem;">
+                        <i class="{{ $spec['icon'] }}" style="color:var(--accent);margin-top:.2rem;flex-shrink:0;width:16px;text-align:center;"></i>
+                        <div>
+                            <div style="font-size:.75rem;color:var(--text-muted);">{{ $spec['label'] }}</div>
+                            <div style="font-size:.9rem;font-weight:700;color:var(--primary);">{{ $spec['value'] }}</div>
                         </div>
                     </div>
                     @endforeach
