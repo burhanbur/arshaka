@@ -415,7 +415,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="col-lg-3">
                 <h6>Kontak Kami</h6>
-                <a href="https://maps.google.com/?q=Gardenia+Residence+Bojong+Gede+Bogor" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt me-2" style="color:var(--accent)"></i>Gardenia Residence Blok A1, Bojong Gede, Kab. Bogor 16920</a>
+                <a href="https://maps.google.com/?q=Gardenia+Residence+Bojong+Gede+Bogor" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt me-2" style="color:var(--accent)"></i>Gardenia Residence Blok A1, Jl. Raya Pabuaran Rawapanjang, Bojong Gede, Kab. Bogor</a>
                 <a href="mailto:arshakalogistic@gmail.com"><i class="fas fa-envelope me-2" style="color:var(--accent)"></i>arshakalogistic@gmail.com</a>
                 <a href="https://wa.me/6281511015666" target="_blank" rel="noopener"><i class="fab fa-whatsapp me-2" style="color:var(--accent)"></i>0815-1101-5666</a>
                 <a href="https://www.instagram.com/arshakalogistic" target="_blank" rel="noopener"><i class="fab fa-instagram me-2" style="color:var(--accent)"></i>@arshakalogistic</a>

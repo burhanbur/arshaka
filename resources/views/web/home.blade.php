@@ -14,37 +14,35 @@
     display: flex; align-items: center;
     position: relative; overflow: hidden;">
 
-    <div class="container py-5">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-lg-7 text-center" data-aos="fade-up"
-                 style="background:rgba(255,255,255,.45);backdrop-filter:blur(2px);
-                        -webkit-backdrop-filter:blur(2px);
-                        border-radius:16px;padding:2.5rem 2rem;">
-                <span style="display:inline-block;background:rgba(196,132,42,.2);color:#E8A84C;
-                             border:1px solid rgba(196,132,42,.5);border-radius:20px;
-                             font-size:.8rem;font-weight:600;letter-spacing:.1em;
-                             padding:.3rem 1rem;text-transform:uppercase;margin-bottom:1.2rem;">
-                    PT Arshaka Logistik Indonesia
-                </span>
-                <h1 style="font-size:clamp(2rem,5vw,3.6rem);color:var(--primary);line-height:1.2;margin-bottom:1rem;">
-                    Empowering Business,<br>
-                    <span style="color:var(--accent);">Connecting Indonesia.</span>
-                </h1>
-                <p style="color:var(--text-dark);font-size:1.1rem;max-width:540px;margin-bottom:2rem;line-height:1.8;">
-                    Kami hadir untuk memenuhi kebutuhan distribusi barang ke seluruh Indonesia.
-                    Armada terawat rata-rata tahun 2016 ke atas, driver bersertifikasi, dan
-                    sistem tracking berbasis teknologi digital real-time.
-                </p>
-                <div class="d-flex flex-wrap gap-3 justify-content-center">
-                    <a href="{{ route('web.contact') }}" class="btn-primary-custom">
-                        <i class="fas fa-phone-alt me-2"></i>Konsultasi Gratis
-                    </a>
-                    <a href="{{ route('web.services') }}" class="btn-outline-custom"
-                       style="color:var(--primary);border-color:var(--primary);">
-                        <i class="fas fa-truck me-2"></i>Lihat Layanan
-                    </a>
-                </div>
-            </div>
+    <div data-aos="fade-down" data-aos-delay="100"
+         style="position:absolute;top:4rem;right:2%;
+                max-width:600px;
+                background:rgba(255,255,255,.5);backdrop-filter:blur(2px);
+                -webkit-backdrop-filter:blur(2px);
+                border-radius:14px;padding:1.4rem 1.6rem;
+                border:1px solid rgba(255,255,255,.6);
+                box-shadow:0 4px 24px rgba(0,0,0,.1);">
+        <span style="display:inline-block;background:rgba(196,132,42,.2);color:#E8A84C;
+                     border:1px solid rgba(196,132,42,.5);border-radius:20px;
+                     font-size:.7rem;font-weight:600;letter-spacing:.08em;
+                     padding:.25rem .8rem;text-transform:uppercase;margin-bottom:.9rem;">
+            PT Arshaka Logistik Indonesia
+        </span>
+        <h1 style="font-size:clamp(1.3rem,2.5vw,1.9rem);color:var(--primary);line-height:1.25;margin-bottom:.7rem;">
+            Empowering Business,<br>
+            <span style="color:var(--accent);">Connecting Indonesia.</span>
+        </h1>
+        <p style="color:var(--text-dark);font-size:.82rem;margin-bottom:1.2rem;line-height:1.7;">
+            Armada terawat, driver bersertifikasi, dan tracking digital real-time ke seluruh Indonesia.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+            <a href="{{ route('web.contact') }}" class="btn-primary-custom" style="font-size:.8rem;padding:.5rem 1.1rem;">
+                <i class="fas fa-phone-alt me-1"></i>Konsultasi Gratis
+            </a>
+            <a href="{{ route('web.services') }}" class="btn-outline-custom"
+               style="color:var(--primary);border-color:var(--primary);font-size:.8rem;padding:.5rem 1.1rem;">
+                <i class="fas fa-truck me-1"></i>Lihat Layanan
+            </a>
         </div>
     </div>
 

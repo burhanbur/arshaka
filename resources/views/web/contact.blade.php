@@ -56,9 +56,10 @@
                         <div>
                             <div style="font-weight:600;color:var(--primary);font-size:.9rem;margin-bottom:.2rem;">Alamat</div>
                             <div style="font-size:.88rem;color:var(--text-muted);font-size:.88rem;line-height:1.6;">
-                                Gardenia Residence Blok A1 Rawapanjang,<br>
-                                Bojong Gede, Kab. Bogor,<br>
-                                Jawa Barat 16920
+                                Gardenia Residence Blok A1
+                                Jl. Raya Pabuaran
+                                Rawapanjang, Bojong Gede
+                                Kab. Bogor, Jawa Barat
                             </div>
                         </div>
                     </div>
