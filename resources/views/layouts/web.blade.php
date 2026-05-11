@@ -84,7 +84,7 @@
             color: #fff !important;
             letter-spacing: -.3px;
         }
-        #mainNav .navbar-brand span { color: var(--accent); }
+        #mainNav .navbar-brand span { color: #fff; }
         #mainNav .nav-link {
             color: rgba(255,255,255,.85) !important;
             font-weight: 500;

@@ -15,10 +15,10 @@
     position: relative; overflow: hidden;">
 
     <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-lg-7" data-aos="fade-right"
-                 style="background:rgba(255,255,255,.72);backdrop-filter:blur(6px);
-                        -webkit-backdrop-filter:blur(6px);
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-7 text-center" data-aos="fade-up"
+                 style="background:rgba(255,255,255,.45);backdrop-filter:blur(2px);
+                        -webkit-backdrop-filter:blur(2px);
                         border-radius:16px;padding:2.5rem 2rem;">
                 <span style="display:inline-block;background:rgba(196,132,42,.2);color:#E8A84C;
                              border:1px solid rgba(196,132,42,.5);border-radius:20px;
@@ -35,7 +35,7 @@
                     Armada terawat rata-rata tahun 2016 ke atas, driver bersertifikasi, dan
                     sistem tracking berbasis teknologi digital real-time.
                 </p>
-                <div class="d-flex flex-wrap gap-3">
+                <div class="d-flex flex-wrap gap-3 justify-content-center">
                     <a href="{{ route('web.contact') }}" class="btn-primary-custom">
                         <i class="fas fa-phone-alt me-2"></i>Konsultasi Gratis
                     </a>
@@ -155,14 +155,14 @@
                                 <i class="fas fa-box" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
                                 <div>
                                     <div style="font-size:.75rem;color:var(--text-muted);">Volume</div>
-                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">35 – 40 m³</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">20 – 30 m³</div>
                                 </div>
                             </div>
                             <div style="display:flex;align-items:flex-start;gap:.75rem;">
                                 <i class="fas fa-truck" style="color:var(--accent);margin-top:.15rem;flex-shrink:0;"></i>
                                 <div>
                                     <div style="font-size:.75rem;color:var(--text-muted);">Muatan</div>
-                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">7 – 8 ton</div>
+                                    <div style="font-size:.9rem;font-weight:700;color:var(--primary);">2 – 4 ton</div>
                                 </div>
                             </div>
                             <div style="display:flex;align-items:flex-start;gap:.75rem;">

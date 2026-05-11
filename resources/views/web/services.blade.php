@@ -43,8 +43,8 @@
                 ['icon'=>'fas fa-ruler-combined',  'label'=>'Dimensi (P×L×T)', 'value'=>'4.2 × 1.7 × 1.9 m'],
             ]],
             'cdd-longbox'  => ['badge'=>'Armada Menengah', 'badge_color'=>'var(--primary)', 'specs'=>[
-                ['icon'=>'fas fa-box',            'label'=>'Volume',           'value'=>'35 – 40 m³'],
-                ['icon'=>'fas fa-truck',           'label'=>'Muatan',           'value'=>'7 – 8 ton'],
+                ['icon'=>'fas fa-box',            'label'=>'Volume',           'value'=>'20 – 30 m³'],
+                ['icon'=>'fas fa-truck',           'label'=>'Muatan',           'value'=>'2 – 4 ton'],
                 ['icon'=>'fas fa-ruler-combined',  'label'=>'Dimensi (P×L×T)', 'value'=>'7–8 × 2.3 × 2.5 m'],
             ]],
             'fuso'    => ['badge'=>'Armada Besar',    'badge_color'=>'var(--accent)',  'specs'=>[
