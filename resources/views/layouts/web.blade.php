@@ -373,7 +373,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
         <div class="row g-4 pb-4">
             <div class="col-lg-4">
-                <div class="footer-brand mb-3">ARSHAKA <span>LOGISTIK INDONESIA</span></div>
+                <div class="footer-brand mb-3">ARSHAKA LOGISTIK INDONESIA</div>
                 <p style="font-size:.9rem; line-height:1.8;">
                     PT Arshaka Logistik Indonesia – mitra terpercaya jasa transportasi dan logistik darat
                     ke seluruh Indonesia. Armada modern, driver bersertifikasi, tracking real-time.
