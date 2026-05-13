@@ -1,6 +1,6 @@
 @extends('layouts.web')
 
-@section('title', 'Blog – PT Arshaka Logistik Indonesia')
+@section('title', 'Arshaka Logistik Indonesia – Blog & Artikel')
 @section('meta_description', 'Baca artikel terbaru seputar industri logistik, tips pengiriman, dan berita bisnis dari PT Arshaka Logistik Indonesia.')
 
 @section('content')

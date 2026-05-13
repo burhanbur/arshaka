@@ -1,6 +1,6 @@
 @extends('layouts.web')
 
-@section('title', 'PT Arshaka Logistik Indonesia – Empowering Business, Connecting Indonesia')
+@section('title', 'Arshaka Logistik Indonesia – Empowering Business, Connecting Indonesia')
 @section('meta_description', 'PT Arshaka Logistik Indonesia menyediakan jasa penyewaan truck dan pengiriman barang ke seluruh Indonesia dengan armada modern dan driver bersertifikasi.')
 
 @section('content')

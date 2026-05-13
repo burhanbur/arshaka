@@ -1,6 +1,6 @@
 @extends('layouts.web')
 
-@section('title', $post->title . ' – PT Arshaka Logistik Indonesia')
+@section('title', 'Arshaka Logistik Indonesia – ' . $post->title)
 @section('meta_description', \Illuminate\Support\Str::limit(strip_tags($post->content), 155))
 @section('og_image', $post->thumbnail_url)
 

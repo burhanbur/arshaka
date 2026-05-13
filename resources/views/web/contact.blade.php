@@ -1,6 +1,6 @@
 @extends('layouts.web')
 
-@section('title', 'Hubungi Kami – PT Arshaka Logistik Indonesia')
+@section('title', 'Arshaka Logistik Indonesia – Hubungi Kami')
 @section('meta_description', 'Hubungi PT Arshaka Logistik Indonesia untuk kebutuhan transportasi dan logistik Anda. Berlokasi di Bojong Gede, Bogor. Email: arshakalogistic@gmail.com')
 
 @section('content')

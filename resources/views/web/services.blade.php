@@ -1,6 +1,6 @@
 @extends('layouts.web')
 
-@section('title', 'Layanan – PT Arshaka Logistik Indonesia')
+@section('title', 'Arshaka Logistik Indonesia – Armada Kami')
 @section('meta_description', 'Layanan penyewaan truck engkel, double, fuso/tronton wingbox, tracking real-time dan pengiriman ke seluruh Indonesia dari PT Arshaka Logistik Indonesia.')
 
 @section('content')

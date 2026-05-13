@@ -1,6 +1,6 @@
 @extends('layouts.web')
 
-@section('title', 'Galeri – PT Arshaka Logistik Indonesia')
+@section('title', 'Arshaka Logistik Indonesia – Galeri Kegiatan')
 @section('meta_description', 'Galeri foto kegiatan dan armada PT Arshaka Logistik Indonesia.')
 
 @push('styles')

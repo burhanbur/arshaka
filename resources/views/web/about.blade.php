@@ -1,6 +1,6 @@
 @extends('layouts.web')
 
-@section('title', 'Tentang Kami – PT Arshaka Logistik Indonesia')
+@section('title', 'Arshaka Logistik Indonesia – Tentang Kami')
 @section('meta_description', 'Kenali lebih jauh profil, visi, misi, dan nilai-nilai PT Arshaka Logistik Indonesia – perusahaan transportasi logistik darat terpercaya berbasis di Bojong Gede, Bogor.')
 
 @section('content')
