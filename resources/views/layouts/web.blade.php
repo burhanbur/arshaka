@@ -6,10 +6,10 @@
 
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Arshaka Logistik Indonesia",
-    "url": "{{ url('/') }}"
+        "@@context": "https://schema.org",
+        "@@type": "WebSite",
+        "name": "Arshaka Logistik Indonesia",
+        "url": "{{ url('/') }}"
     }
     </script>
 
