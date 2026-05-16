@@ -63,13 +63,14 @@
         }
 
         * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
 
         body {
             font-family: 'Inter', sans-serif;
             color: var(--text-dark);
             background: #fff;
             line-height: 1.7;
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -313,6 +314,7 @@
             transition: transform .2s;
         }
         .wa-float:hover { transform: scale(1.1); color: #fff; }
+        .wa-float, .wa-float:hover { text-decoration: none; }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 767px) {
