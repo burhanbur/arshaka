@@ -21,6 +21,16 @@
     })(window,document,'script','dataLayer','GTM-WW6ZT62V');</script>
     <!-- End Google Tag Manager -->
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LHB5M7Z3Q"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2LHB5M7Z3Q');
+    </script>
+
     {{-- Primary Meta Tags --}}
     <title>@yield('title', 'PT Arshaka Logistik Indonesia – Empowering Business, Connecting Indonesia')</title>
     <meta name="description" content="@yield('meta_description', 'PT Arshaka Logistik Indonesia menyediakan jasa penyewaan truck dan pengiriman barang ke seluruh Indonesia dengan armada modern dan driver bersertifikasi.')">
